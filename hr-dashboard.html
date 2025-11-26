@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trading Places – Culture Pulse Dashboard (HR)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="hr-dashboard">
+<div class="app-shell">
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <div class="logo">TRADING PLACES – HR PORTAL</div>
+      <div class="top-bar-title">Culture Pulse Dashboard</div>
+      <nav class="main-nav">
+        <a href="index.html">Employee View</a>
+        <a href="manager-dashboard.html">Manager View</a>
+        <a href="hr-dashboard.html">Culture Pulse</a>
+      </nav>
+    </div>
+    <div class="top-bar-right">
+      <span data-user-name>Sara Ahmed (HR)</span>
+      <div class="top-bar-divider"></div>
+      <a href="settings-privacy.html" class="text-link">Settings</a>
+      <a href="#" class="text-link" data-action="logout">Log out</a>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="grid-2">
+      <!-- Left column: overview -->
+      <section>
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Training Completion Overview</div>
+              <div class="card-subtitle">
+                Anonymised, aggregate data for all employees
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-block">
+              <div class="stat-label">Employees enrolled</div>
+              <div class="stat-value">240</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-label">Completed all mandatory</div>
+              <div class="stat-value">172</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-label">In progress</div>
+              <div class="stat-value">53</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-label">Not started</div>
+              <div class="stat-value">15</div>
+            </div>
+          </div>
+
+          <div class="progress-wrapper mt-2">
+            <div class="progress-label-row">
+              <span>Mandatory DEI training completion</span>
+              <span>72%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 72%;"></div>
+            </div>
+          </div>
+
+          <div class="btn-row mt-2">
+            <button class="btn-small btn-secondary" data-action="open-culture-report">
+              Open Culture Readiness Report
+            </button>
+          </div>
+        </div>
+
+        <div class="card mt-3">
+          <div class="card-header">
+            <div class="card-title">Scenario Performance by Team</div>
+          </div>
+
+          <ul class="simple-list">
+            <li>
+              <div class="simple-list-item">
+                <div>
+                  <div class="simple-list-main">Engineering</div>
+                  <div class="simple-list-meta">
+                    Median empathy score: 68% &nbsp;|&nbsp; Completion: 78%
+                  </div>
+                </div>
+                <div class="btn-row">
+                  <button class="btn-small btn-ghost" data-action="view-anonymised-paths">
+                    View breakdown
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="simple-list-item">
+                <div>
+                  <div class="simple-list-main">Trading &amp; Markets</div>
+                  <div class="simple-list-meta">
+                    Median empathy score: 61% &nbsp;|&nbsp; Completion: 65%
+                  </div>
+                </div>
+                <div class="btn-row">
+                  <button class="btn-small btn-ghost" data-action="view-anonymised-paths">
+                    View breakdown
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="simple-list-item">
+                <div>
+                  <div class="simple-list-main">Operations</div>
+                  <div class="simple-list-meta">
+                    Median empathy score: 74% &nbsp;|&nbsp; Completion: 83%
+                  </div>
+                </div>
+                <div class="btn-row">
+                  <button class="btn-small btn-ghost" data-action="view-anonymised-paths">
+                    View breakdown
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Right column: risk / insights -->
+      <aside>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Empathy Score Heatmap</div>
+          </div>
+          <div class="small-text">
+            Simple heatmap showing average empathy scores by business area.
+          </div>
+          <div class="heatmap-grid">
+            <div class="heatmap-cell heatmap-med">
+              <div class="heatmap-label">Engineering</div>
+              <div>68%</div>
+            </div>
+            <div class="heatmap-cell heatmap-low">
+              <div class="heatmap-label">Trading</div>
+              <div>61%</div>
+            </div>
+            <div class="heatmap-cell heatmap-high">
+              <div class="heatmap-label">Operations</div>
+              <div>74%</div>
+            </div>
+            <div class="heatmap-cell heatmap-med">
+              <div class="heatmap-label">Support</div>
+              <div>70%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-3">
+          <div class="card-header">
+            <div class="card-title">Compliance Status</div>
+          </div>
+
+          <ul class="sidebar-list">
+            <li>
+              <div class="sidebar-list-item">
+                <strong>Mandatory DEI training</strong><br>
+                15 employees have not started mandatory DEI training.
+              </div>
+            </li>
+            <li>
+              <div class="sidebar-list-item">
+                <strong>Upcoming reviews</strong><br>
+                4 teams are due for an empathy score review this month.
+              </div>
+            </li>
+            <li>
+              <div class="sidebar-list-item">
+                <strong>GDPR &amp; consent</strong><br>
+                All employees have current training data consent on file.
+              </div>
+            </li>
+          </ul>
+
+          <div class="btn-row mt-2">
+            <button class="btn-small btn-secondary" data-action="export-report">
+              Export anonymised dataset
+            </button>
+            <button class="btn-small btn-ghost" data-action="api-placeholder">
+              Send to HR system (API)
+            </button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

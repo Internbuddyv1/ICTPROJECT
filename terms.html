@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trading Places – Terms & Conditions (Prototype)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="terms">
+<header class="top-bar">
+  <div class="top-bar-left">
+    <div class="logo">TRADING PLACES</div>
+    <div class="top-bar-title">Terms &amp; Conditions (Prototype)</div>
+  </div>
+  <div class="top-bar-right">
+    <a href="login.html" class="text-link">Back to login</a>
+  </div>
+</header>
+
+<main class="tc-wrapper">
+  <section class="tc-header">
+    <h1>Before you start</h1>
+    <p class="small-text">
+      These flashcards summarise the key terms of using the Trading Places prototype.
+      They are written in plain language for testing purposes and are not a full legal
+      agreement. In a production system, a formal Terms of Service document would also apply.
+    </p>
+  </section>
+
+  <section class="tc-flashcards">
+    <!-- CARD 1 -->
+    <div class="tc-card">
+      <div class="tc-tag">Card 1</div>
+      <div class="tc-title">How your data is used</div>
+      <p>
+        This prototype records your choices in training scenarios to calculate an empathy
+        score and to generate anonymised statistics. Individual answers are not shown to
+        your line manager or peers. HR and programme owners may see only aggregated,
+        de-identified results.
+      </p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="tc-card">
+      <div class="tc-tag">Card 2</div>
+      <div class="tc-title">Role-based access</div>
+      <p>
+        Employees see only their own training progress and scores. Managers see anonymised
+        insights for their team. HR sees organisation-wide trends, also anonymised. No role
+        can access raw, named scenario choices for another individual through this prototype.
+      </p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="tc-card">
+      <div class="tc-tag">Card 3</div>
+      <div class="tc-title">Prototype status</div>
+      <p>
+        Trading Places is currently a prototype. Content, scores, and interfaces may change
+        without notice. Scenario results are intended for learning and reflection only and
+        should not be used as formal performance ratings or disciplinary evidence.
+      </p>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="tc-card">
+      <div class="tc-tag">Card 4</div>
+      <div class="tc-title">Respectful use</div>
+      <p>
+        Scenarios may include sensitive themes such as bias, discrimination, and exclusion.
+        By using this prototype you agree to engage respectfully and to follow your
+        organisation’s code of conduct when discussing or sharing scenario content.
+      </p>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="tc-card">
+      <div class="tc-tag">Card 5</div>
+      <div class="tc-title">Your rights</div>
+      <p>
+        You can request access to, correction of, or deletion of your personal data stored
+        in this prototype environment by contacting the project owner or Data Protection
+        Officer. In a live deployment, formal processes under GDPR and other applicable
+        laws would apply.
+      </p>
+    </div>
+
+    <div class="tc-controls">
+      <div class="tc-controls-left">
+        <button class="btn-small btn-secondary" id="tcPrev" type="button">Previous</button>
+        <button class="btn-small btn" id="tcNext" type="button">Next</button>
+      </div>
+      <div class="tc-step" id="tcStep">1 / 5</div>
+    </div>
+  </section>
+
+  <section class="mt-3">
+    <p class="small-text">
+      Returning to the <a href="login.html" class="text-link">login page</a> and ticking
+      “I agree” confirms that you have read and understood these prototype terms.
+    </p>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

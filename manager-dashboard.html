@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trading Places – Manager Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="manager-dashboard">
+<div class="app-shell">
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <div class="logo">TRADING PLACES</div>
+      <div class="top-bar-title">Manager Dashboard</div>
+      <nav class="main-nav">
+        <a href="index.html">Employee View</a>
+        <a href="manager-dashboard.html">Manager View</a>
+        <a href="hr-dashboard.html">Culture Pulse</a>
+      </nav>
+    </div>
+    <div class="top-bar-right">
+      <span data-user-name>Alicia Patel (Manager)</span>
+      <div class="top-bar-divider"></div>
+      <a href="settings-privacy.html" class="text-link">Settings</a>
+      <a href="#" class="text-link" data-action="logout">Log out</a>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="grid-2">
+      <!-- Left: team overview -->
+      <section>
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Team Training Overview</div>
+              <div class="card-subtitle">
+                Anonymised view of your team’s progress through Trading Places scenarios.
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-block">
+              <div class="stat-label">Team members</div>
+              <div class="stat-value">12</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-label">All mandatory complete</div>
+              <div class="stat-value">9</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-label">In progress</div>
+              <div class="stat-value">2</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-label">Not started</div>
+              <div class="stat-value">1</div>
+            </div>
+          </div>
+
+          <div class="progress-wrapper mt-2">
+            <div class="progress-label-row">
+              <span>Mandatory training completion</span>
+              <span>83%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 83%;"></div>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn-small btn-secondary" data-action="send-team-reminder">
+              Send reminder to team
+            </button>
+            <button class="btn-small btn-ghost" data-action="open-culture-report">
+              View Culture Readiness Report
+            </button>
+          </div>
+        </div>
+
+        <div class="card mt-3">
+          <div class="card-header">
+            <div class="card-title">Team Scenario Insights</div>
+          </div>
+
+          <ul class="simple-list">
+            <li>
+              <div class="simple-list-item">
+                <div>
+                  <div class="simple-list-main">Recruitment Interview – Windrush Case</div>
+                  <div class="simple-list-meta">
+                    Median empathy score: 71% &nbsp;|&nbsp; 11 of 12 completed
+                  </div>
+                </div>
+                <div class="btn-row">
+                  <button class="btn-small btn-ghost" data-action="view-anonymised-paths">
+                    View anonymised paths
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="simple-list-item">
+                <div>
+                  <div class="simple-list-main">Performance Review Conversation</div>
+                  <div class="simple-list-meta">
+                    Median empathy score: 64% &nbsp;|&nbsp; 8 of 12 completed
+                  </div>
+                </div>
+                <div class="btn-row">
+                  <button class="btn-small btn-ghost" data-action="view-themes">
+                    View themes
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="simple-list-item">
+                <div>
+                  <div class="simple-list-main">First Day on the Trading Floor</div>
+                  <div class="simple-list-meta">
+                    Median empathy score: 69% &nbsp;|&nbsp; 7 of 12 completed
+                  </div>
+                </div>
+                <div class="btn-row">
+                  <button class="btn-small btn-ghost" data-action="view-anonymised-paths">
+                    View anonymised paths
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Right: coaching suggestions & focus areas -->
+      <aside>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Coaching Suggestions</div>
+          </div>
+          <ul class="sidebar-list">
+            <li>
+              <div class="sidebar-list-item">
+                <strong>1. Use scenarios in 1:1s</strong><br>
+                Invite team members to discuss what surprised them in a scenario rather
+                than focusing on their score. This keeps the conversation developmental,
+                not evaluative.
+              </div>
+            </li>
+            <li>
+              <div class="sidebar-list-item">
+                <strong>2. Model vulnerability</strong><br>
+                Share a moment where your own assumptions were challenged. This signals
+                that learning is expected, not punished, and supports psychological safety.
+              </div>
+            </li>
+            <li>
+              <div class="sidebar-list-item">
+                <strong>3. Watch for patterns</strong><br>
+                Look at which types of choices (voice, challenge, allyship) your team
+                tends to avoid and explore why in team discussions.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card mt-3">
+          <div class="card-header">
+            <div class="card-title">Focus Areas for Your Team</div>
+          </div>
+          <ul class="sidebar-list">
+            <li>
+              <div class="sidebar-list-item">
+                <strong>Allyship behaviours</strong><br>
+                Team members score well on recognising bias but are less likely to
+                choose active allyship responses (e.g. speaking up, backing a colleague).
+              </div>
+            </li>
+            <li>
+              <div class="sidebar-list-item">
+                <strong>Challenging up</strong><br>
+                In scenarios involving senior leaders, “avoidant” options are chosen
+                more often. Consider how you can make it safer to challenge decisions.
+              </div>
+            </li>
+            <li>
+              <div class="sidebar-list-item">
+                <strong>Onboarding &amp; early experiences</strong><br>
+                First-day and early-career scenarios suggest some colleagues feel
+                unsure about “fitting in”. Use onboarding and buddying to address this.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
