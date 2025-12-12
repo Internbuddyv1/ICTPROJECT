@@ -1,112 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Trading Places – Scenario Complete</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Trading Places – Scenario Results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-page="scenario-results">
+<a href="#main" class="skip-link" id="skip-to-content">Skip to content</a>
+
 <div class="app-shell">
   <header class="top-bar">
     <div class="top-bar-left">
       <div class="logo">TRADING PLACES</div>
-      <div class="top-bar-title">Scenario Complete</div>
+      <div class="top-bar-title">Training Results</div>
     </div>
     <div class="top-bar-right">
-      <a href="index.html" class="btn-small btn-secondary">Back to Dashboard</a>
+      <a href="index.html" class="btn-small btn-ghost">Back to Dashboard</a>
     </div>
   </header>
 
-  <main class="page-content">
+  <main id="main" class="page-content">
     <div class="results-layout">
-      <!-- Left: Summary & score -->
+      <!-- Left: Result summary -->
       <section class="card">
-        <div class="results-check">✓</div>
-        <div class="card-title">
-          Recruitment Interview – Windrush Descendant Candidate
-        </div>
-        <div class="card-subtitle mt-1">
-          You have completed this scenario.
+        <div class="card-header">
+          <div>
+            <div class="card-title" id="res-title">Scenario</div>
+            <div class="card-subtitle">Your result and next steps</div>
+          </div>
+          <div class="btn-row">
+            <button class="btn-small btn-secondary" data-action="print-report">Export as PDF</button>
+          </div>
         </div>
 
-        <div class="stat-row mt-2">
+        <div class="stat-row">
           <div class="stat-block">
-            <div class="stat-label">Empathy score</div>
-            <div class="stat-value">78%</div>
+            <div class="stat-label">Status</div>
+            <div class="stat-value" id="res-status">Completed</div>
           </div>
           <div class="stat-block">
-            <div class="stat-label">Bias recognition</div>
-            <div class="stat-value">82%</div>
+            <div class="stat-label">Progress</div>
+            <div class="stat-value" id="res-pct">100%</div>
           </div>
           <div class="stat-block">
-            <div class="stat-label">Perspective-taking</div>
-            <div class="stat-value">75%</div>
+            <div class="stat-label">Duration</div>
+            <div class="stat-value" id="res-duration">—</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-label">Perspectives</div>
+            <div class="stat-value" id="res-perspectives">—</div>
           </div>
         </div>
 
         <div class="small-text mt-2">
-          Your empathy score combines how accurately you identified biased
-          assumptions, how effectively you took multiple perspectives, and how
-          often you chose inclusive responses.
+          Nice work. Your completion is saved to your local learning record. In a real deployment,
+          this would sync to your LMS/HRIS.
         </div>
 
-        <div class="btn-row mt-3">
-          <button class="btn-small btn-secondary" data-action="review-choices">
-            Review choices
-          </button>
-          <button class="btn-small btn-secondary" data-action="replay-scenario">
-            Replay scenario
-          </button>
+        <div class="btn-row mt-2">
+          <a href="#" class="btn-small btn-secondary" data-action="review-choices">Review your choices</a>
+          <a href="#" class="btn-small btn-ghost" data-action="replay-scenario">Replay scenario</a>
         </div>
       </section>
 
-      <!-- Right: Key insights, reflection & next steps -->
-      <section class="card">
-        <div class="card-title">Key Insights &amp; Reflection</div>
-
-        <div class="mt-2 small-text">
-          <strong>1. Unconscious Bias Recognition</strong><br>
-          You demonstrated strong awareness of how ideas about “culture fit”
-          and “professionalism” can disadvantage people from migrant and
-          working-class backgrounds.
+      <!-- Right: Reflection -->
+      <aside class="card">
+        <div class="card-header">
+          <div class="card-title">Reflection</div>
         </div>
-
-        <div class="mt-2 small-text">
-          <strong>2. Perspective-Taking</strong><br>
-          You moved between the candidate, hiring manager, and HR views, and
-          adjusted your choices as new information appeared.
+        <div class="small-text">
+          What did you notice? Where might bias or power dynamics affect the outcome?
+          Write a short reflection to consolidate the learning.
         </div>
-
-        <div class="mt-2 small-text">
-          <strong>3. Action-Oriented Thinking</strong><br>
-          Your decisions leaned towards addressing bias directly rather than
-          avoiding difficult conversations.
+        <div class="mt-2">
+          <textarea id="reflectionText" aria-label="Reflection"></textarea>
         </div>
-
-        <div class="mt-3 small-text">
-          <strong>Your reflection (prototype)</strong><br>
-          Take a moment to capture one idea you will take into real interviews
-          or conversations.
+        <div class="btn-row mt-2">
+          <button class="btn-small btn-secondary" data-action="save-reflection">Save reflection</button>
+          <button class="btn-small btn-ghost" data-action="download-data">Download my data</button>
         </div>
-
-        <div class="mt-1">
-          <textarea id="reflectionText"
-            placeholder="For example: In future, I will be more aware of how I talk about 'fit' and will focus on skills and potential instead."></textarea>
-        </div>
-
-        <div class="btn-row mt-1">
-          <button class="btn-small btn" data-action="save-reflection">
-            Save reflection (prototype)
-          </button>
-        </div>
-
-        <div class="mt-3 small-text">
-          <strong>Suggested next steps</strong><br>
-          • Complete “Performance Review Conversation” to build on feedback skills.<br>
-          • Reflect on any real recruitment or promotion decisions you’ve been involved
-          in and note where similar patterns might appear.
-        </div>
-      </section>
+      </aside>
     </div>
   </main>
 </div>

@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Trading Places – Employee Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Trading Places – Employee Culture Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
 </head>
 <body data-page="employee-dashboard">
+<a href="#main" class="skip-link" id="skip-to-content">Skip to content</a>
+
 <div class="app-shell">
   <header class="top-bar">
     <div class="top-bar-left">
-      <div class="logo">TRADING PLACES</div>
-      <div class="top-bar-title">Employee Dashboard</div>
-      <nav class="main-nav">
-        <a href="index.html">My Training</a>
-        <a href="manager-dashboard.html">Manager View</a>
-        <a href="hr-dashboard.html">Culture Pulse</a>
-      </nav>
+      <div class="logo" onclick="window.location.href='index.html'">TRADING PLACES</div>
+      <div class="top-bar-title">My Culture Training</div>
     </div>
     <div class="top-bar-right">
       <span data-user-name>John Doe</span>
@@ -25,16 +24,17 @@
     </div>
   </header>
 
-  <main class="page-content">
+  <main id="main" class="page-content">
     <div class="grid-2">
-      <!-- Left column -->
+
+      <!-- LEFT: Progress + Scenarios -->
       <section>
         <div class="card">
           <div class="card-header">
             <div>
               <div class="card-title">Current Training Progress</div>
-              <div class="card-subtitle">
-                You have completed <strong>13 of 20</strong> scenarios
+              <div id="emp-subtitle" class="card-subtitle">
+                You have completed <strong>0 of 4</strong> immersive scenarios.
               </div>
             </div>
           </div>
@@ -42,21 +42,23 @@
           <div class="progress-wrapper">
             <div class="progress-label-row">
               <span>Total scenarios</span>
-              <span>65% complete</span>
+              <span id="emp-pct-label">0% complete</span>
             </div>
-            <div class="progress-track">
-              <div class="progress-fill" style="width: 65%;"></div>
+            <div class="progress-track progress-thick">
+              <div id="emp-pct-bar" class="progress-fill" style="width: 0%;"></div>
             </div>
           </div>
 
           <div class="btn-row">
-            <a href="scenario-training.html" class="btn">Continue Training</a>
+            <a href="scenario-training.html?sid=recruitment" class="btn">
+              Resume Immersive Training
+            </a>
           </div>
         </div>
 
         <div class="card mt-3">
           <div class="card-header">
-            <div class="card-title">Available Scenarios</div>
+            <div class="card-title">Immersive Scenario Library</div>
           </div>
 
           <ul class="simple-list">
@@ -67,15 +69,15 @@
                     Recruitment Interview – Windrush Descendant Candidate
                   </div>
                   <div class="simple-list-meta">
-                    Experience hiring decisions from multiple perspectives<br>
-                    Duration: 15 minutes &nbsp;|&nbsp; Perspectives: 3
+                    Experience hiring decisions from multiple perspectives<br/>
+                    Duration: 15 min · Perspectives: 3
                   </div>
                 </div>
-                <div>
-                  <span class="badge">In Progress</span>
-                </div>
+                <div><span class="badge" data-scenario-badge="recruitment">Not started</span></div>
                 <div class="btn-row">
-                  <a href="scenario-training.html" class="btn-small btn-secondary">Resume</a>
+                  <a href="scenario-training.html?sid=recruitment" class="btn-small btn-secondary">
+                    Launch VR-style View
+                  </a>
                 </div>
               </div>
             </li>
@@ -85,15 +87,15 @@
                 <div>
                   <div class="simple-list-main">First Day on the Trading Floor</div>
                   <div class="simple-list-meta">
-                    Navigate microaggressions and inclusion challenges on day one<br>
-                    Duration: 10 minutes &nbsp;|&nbsp; Perspectives: 2
+                    Navigate subtle bias & microaggressions on day one<br/>
+                    Duration: 10 min · Perspectives: 2
                   </div>
                 </div>
-                <div>
-                  <span class="badge">Not Started</span>
-                </div>
+                <div><span class="badge" data-scenario-badge="first-day">Not started</span></div>
                 <div class="btn-row">
-                  <a href="scenario-training.html" class="btn-small btn-secondary">Start</a>
+                  <a href="scenario-training.html?sid=first-day" class="btn-small btn-secondary">
+                    Launch Scenario
+                  </a>
                 </div>
               </div>
             </li>
@@ -103,15 +105,33 @@
                 <div>
                   <div class="simple-list-main">Performance Review Conversation</div>
                   <div class="simple-list-meta">
-                    Explore feedback dynamics between manager and employee<br>
-                    Duration: 12 minutes &nbsp;|&nbsp; Perspectives: 3
+                    Explore feedback dynamics & power<br/>
+                    Duration: 12 min · Perspectives: 3
                   </div>
                 </div>
-                <div>
-                  <span class="badge">Not Started</span>
-                </div>
+                <div><span class="badge" data-scenario-badge="performance-review">Not started</span></div>
                 <div class="btn-row">
-                  <a href="scenario-training.html" class="btn-small btn-secondary">Start</a>
+                  <a href="scenario-training.html?sid=performance-review" class="btn-small btn-secondary">
+                    Launch Scenario
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="simple-list-item">
+                <div>
+                  <div class="simple-list-main">Cross-Cultural Client Meeting</div>
+                  <div class="simple-list-meta">
+                    Practice inclusive collaboration in a global setting<br/>
+                    Duration: 10 min · Perspectives: 2
+                  </div>
+                </div>
+                <div><span class="badge" data-scenario-badge="cross-cultural">Not started</span></div>
+                <div class="btn-row">
+                  <a href="scenario-training.html?sid=cross-cultural" class="btn-small btn-secondary">
+                    Launch Scenario
+                  </a>
                 </div>
               </div>
             </li>
@@ -119,13 +139,12 @@
         </div>
       </section>
 
-      <!-- Right column -->
+      <!-- RIGHT: Empathy + Activity -->
       <aside>
         <div class="card">
           <div class="card-header">
-            <div class="card-title">Your Empathy Score</div>
+            <div class="card-title">My Empathy Signal</div>
           </div>
-
           <div class="stat-row">
             <div class="stat-block">
               <div class="stat-label">Overall score</div>
@@ -133,13 +152,14 @@
             </div>
             <div class="stat-block">
               <div class="stat-label">Scenarios completed</div>
-              <div class="stat-value">13 / 20</div>
+              <div class="stat-value">
+                <span id="emp-completed">0</span> / 4
+              </div>
             </div>
           </div>
-
           <div class="mt-2 small-text">
-            Your empathy score reflects how consistently you recognize bias,
-            consider multiple viewpoints, and choose inclusive actions across scenarios.
+            This mock score reflects how consistently you notice bias, explore perspectives,
+            and choose inclusive actions. It is for learning only and is not HR data.
           </div>
         </div>
 
@@ -150,18 +170,7 @@
           <ul class="sidebar-list">
             <li>
               <div class="sidebar-list-item">
-                Completed: “Onboarding in a Hybrid Team” &mdash; Empathy score: 72%
-              </div>
-            </li>
-            <li>
-              <div class="sidebar-list-item">
-                Continued: “Recruitment Interview – Windrush Descendant Candidate”
-                &mdash; Progress: 40%
-              </div>
-            </li>
-            <li>
-              <div class="sidebar-list-item">
-                New scenario unlocked: “Cross-Cultural Client Meeting”
+                Complete a scenario to see your recent cultural learning journey here.
               </div>
             </li>
           </ul>
@@ -169,8 +178,13 @@
       </aside>
     </div>
   </main>
+
+  <footer class="site-footer small-text">
+    © 2025 Trading Places™ – Culture Intelligence Prototype.
+    <a href="terms.html">Terms &amp; Conditions</a> ·
+    <a href="privacy.html">Privacy Notice</a>
+  </footer>
 </div>
 
-<script src="app.js"></script>
 </body>
 </html>
